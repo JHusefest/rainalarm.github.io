@@ -124,7 +124,7 @@ function onSuccess(xmlData) {
         }*/
 
         var urls_temp = jQuery.get({
-          url: var url = "www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml",
+          url: "www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml",
           type: "GET",
           dataType: 'xml',
         }).catch(function(e) {
