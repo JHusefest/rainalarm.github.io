@@ -115,16 +115,19 @@ function onSuccess(xmlData) {
         var json = {"sted":stedsnavn,"nord":Number(nord),"aust":Number(aust),"fylkesnavn":fylkesnavn,"kommunenavn":kommunenavn,"navnetype":navnetype,"ID":j,"Precipitation":-1,"Time":"", "Rain":-1};
         //var url = "http://localhost:8080/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml";
         //console.log(url);
-        var url = "www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml";
-        var url_yr = url.replace("https://jhusefest.github.io/rainalarm.github.io/", ""); 
+        //var url = "www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml";
 
-        var options = {
+        /*var options = {
           url: url_yr,
           type: "GET",
           dataType: 'xml',
-        }
+        }*/
 
-        var urls_temp = $.get(options).catch(function(e) {
+        var urls_temp = jQuery.get({
+          url: var url = "www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml",
+          type: "GET",
+          dataType: 'xml',
+        }).catch(function(e) {
           //console.log(e.status);
         });
 
