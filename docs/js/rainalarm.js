@@ -115,10 +115,10 @@ function onSuccess(xmlData) {
         var json = {"sted":stedsnavn,"nord":Number(nord),"aust":Number(aust),"fylkesnavn":fylkesnavn,"kommunenavn":kommunenavn,"navnetype":navnetype,"ID":j,"Precipitation":-1,"Time":"", "Rain":-1};
         //var url = "http://localhost:8080/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml";
         //console.log(url);
-        var url = "www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml";
+        var url_yr = "www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml";
 
         var options = {
-          url: url,
+          url: url_yr,
           type: "GET",
           dataType: 'xml',
         }
