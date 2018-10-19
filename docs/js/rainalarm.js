@@ -117,11 +117,11 @@ function onSuccess(xmlData) {
         //console.log(url);
 
 
-        var options = {
-          url: url_yr,
-          type: "GET",
-          dataType: 'xml',
-        }
+        //var options = {
+        //  url: url_yr,
+        //  type: "GET",
+        //  dataType: 'xml',
+        //}
 
         var urls_temp = $.get({
           url: "https://www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml",
