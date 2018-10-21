@@ -1,2 +1,2 @@
 # rainalarm.github.io
-Map of what places where rain occurs in Norway the next 90 minutes. 
+Map of places in Norway where rain occurs the next 90 minutes.
