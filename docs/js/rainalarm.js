@@ -124,7 +124,7 @@ function onSuccess(xmlData) {
         //}
 
         var urls_temp = $.get({
-          url: "https://www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml",
+          url: "https://cors.io/?http://www.yr.no/sted/Norge/" + fylkesnavn + "/" + kommunenavn + "/" + stedsnavn + "/varsel_nu.xml",
           type: "GET",
           dataType: 'xml',
         }).catch(function(e) {
