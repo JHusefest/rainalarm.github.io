@@ -2,7 +2,8 @@
 var baseLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
-//192.168.0.11:51015
+
+
 var map = L.map('map', {
   center: [59.9288416666667, 10.600713888888902],
   zoom: 10,
@@ -10,6 +11,9 @@ var map = L.map('map', {
   maxZoom: 18,
   minZoom: 4
 });
+
+map.locate({setView: true, maxZoom: 16});
+map.on('locationfound', onLocationFound);
 
 L.easyButton("foo-bar", function(btn, map) {
     map.locate({setView: true, maxZoom: 16});
@@ -19,8 +23,7 @@ L.easyButton("foo-bar", function(btn, map) {
 function onLocationFound(e) {
     var radius = e.accuracy / 2;
 
-    L.marker(e.latlng).addTo(map)
-        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+    L.marker(e.latlng).addTo(map);
 
     L.circle(e.latlng, radius).addTo(map);
 }
